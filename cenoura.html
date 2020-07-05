@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<style type="text/css">
+
+	@keyframes rotating {
+	0% {
+		top: 50%;
+		
+	}
+
+	50% {
+		top: 30%;
+	}
+
+	100% {
+		top: 50%;
+	}
+	}
+
+	@keyframes fly {
+	0% {
+		right: 50%;
+	}
+
+	100% {
+		right: -50%;
+	}
+	}
+
+
+	@keyframes eating {
+	0% {
+		height: 650px;
+	}
+
+	10% {
+		height: 550px;
+		// background: linear-gradient(-135deg, #f75c03 7.5px, transparent 0) 0 7.5px, linear-gradient(135deg, #f75c03 7.5px, #e3c567 0) 0 7.5px;
+		// background-color: #f75c03;
+		// background-size: 15px 15px;                
+	}
+
+	20% {
+		height: 450px;
+	}
+
+	30% {
+		height: 350px;
+	}
+
+	40% {
+		height: 250px;
+	}
+
+	50% {
+		height: 150px;
+	}
+
+	100% {
+		animation: none;
+		animation: fly 2s ease-in;
+	} 
+	}
+
+body {
+	overflow: hidden;
+	}
+
+	.container {
+		width: 100vw;
+		height: 100vh;
+		display: flex;
+		background: #E3C567;
+  		justify-content: center;
+  		align-items: center;
+  	}
+	
+	.line {
+		width: 100%;
+		height: 20px;
+		background: rgba(0,0,0,0.5);
+		position: absolute;
+		bottom: 50px;
+	}
+	.carrot {
+		width: 200px;
+		height: 650px;
+		//background: #F75C03;
+		background: repeating-linear-gradient(
+						to bottom,
+						#573D1C,
+						#573D1C 10px,
+						#F75C03 10px,
+						#F75C03 100px
+					);
+		z-index: 2;
+		position: absolute;
+		transform: rotate(0deg);
+		border-radius: 30% 30% 70% 70%;
+		animation: rotating 3s linear infinite, eating 1 20s linear, fly 30s linear 1;
+		animation-fill-mode: forwards;
+		animation-direction: normal;
+		
+		&:after {
+			content: "";
+			position: absolute;
+			width: 20px;
+			height: 650px;
+			left: 90px;
+			animation: eating 1 20s linear;
+			background: #F75C03;
+			border-radius: 0 0 70% 70%;
+		}
+		
+		&:before {
+			content: "";
+			position: absolute;
+			width: 20px;
+			height: 100px;
+			left: 90px;
+			top: -100px;
+		//box-shadow: 30px -50px 0px #679436;
+			background: #679436;
+		}
+		
+		.stem {
+			background: none;			
+			width: 300px;
+			height: 300px;
+			position: absolute;
+			left: -55px;
+			top: -101px;
+			border-radius: 75% 75% 10% 10%;
+			border: 5px solid #679436;
+			border-bottom: 0;
+			animation: eating 1 20s linear;
+		}
+	}
+}
+
+
+	</style>
+	<title></title>
+</head>
+<body>
+
+	<div class="container">
+	<div class="carrot"> 
+	<div class="stem"></div>
+	</div>
+	<div class="line"></div>
+</div>
+
+</body>
+</html>

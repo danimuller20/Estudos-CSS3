@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+<style type="text/css">
+	#example1 {
+		border: 10px solid black;
+		padding: 35px;
+		background: url(border.png);
+		background-repeat: no-repeat;
+	}
+
+	#example2 {
+		border: 10px solid black;
+		padding: 35px;
+		background: url(border.png);
+		background-repeat: no-repeat;
+		background-origin: border-box;
+	}
+
+	#example3 {
+		border: 10px solid black;
+		padding: 35px;
+		background: url(border.png);
+		background-repeat: no-repeat;
+		background-origin: content-box;
+	}
+</style>
+
+</head>
+<body>
+
+	<p>No background-origin (pdding-box is default):</p>
+	<div id="example1">
+		<h2>Lorem Ipsum</h2>
+		<p>É um fato conhecido de todos que um leitor se distrairá com o conteúdo de texto legível de uma página quando estiver examinando sua diagramação.</p>
+		<p>A vantagem de usar Lorem Ipsum é que ele tem uma distribuição normal de letras, ao contrário de "Conteúdo aqui, conteúdo aqui", fazendo com que ele tenha uma aparência similar a de um texto legível. Muitos softwares de publicação e editores de páginas na internet agora usam Lorem Ipsum como texto-modelo padrão, e uma rápida busca por 'lorem ipsum' mostra vários websites ainda em sua fase de construção.</p>
+	</div>
+
+	<p>No background-origin border-box:</p>
+	<div id="example2">
+		<h2>Lorem Ipsum</h2>
+		<p>É um fato conhecido de todos que um leitor se distrairá com o conteúdo de texto legível de uma página quando estiver examinando sua diagramação.</p>
+		<p>A vantagem de usar Lorem Ipsum é que ele tem uma distribuição normal de letras, ao contrário de "Conteúdo aqui, conteúdo aqui", fazendo com que ele tenha uma aparência similar a de um texto legível. Muitos softwares de publicação e editores de páginas na internet agora usam Lorem Ipsum como texto-modelo padrão, e uma rápida busca por 'lorem ipsum' mostra vários websites ainda em sua fase de construção.</p>
+	</div>
+
+	<p>No background-origin content-box:</p>
+	<div id="example3">
+		<h2>Lorem Ipsum</h2>
+		<p>É um fato conhecido de todos que um leitor se distrairá com o conteúdo de texto legível de uma página quando estiver examinando sua diagramação.</p>
+		<p>A vantagem de usar Lorem Ipsum é que ele tem uma distribuição normal de letras, ao contrário de "Conteúdo aqui, conteúdo aqui", fazendo com que ele tenha uma aparência similar a de um texto legível. Muitos softwares de publicação e editores de páginas na internet agora usam Lorem Ipsum como texto-modelo padrão, e uma rápida busca por 'lorem ipsum' mostra vários websites ainda em sua fase de construção.</p>
+	</div>
+
+</body>
+</html>

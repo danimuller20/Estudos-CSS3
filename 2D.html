@@ -1,0 +1,129 @@
+<!--
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		
+		#rotate2D, #rotate3D {
+			width: 80px;
+			height: 70px;
+			color: white;
+			position: relative;
+			font-weight: bold;
+			font-size: 15px;
+			padding: 10px;
+			float: left;
+			margin-right: 50px;
+			border-radius: 5px;
+			border: 1px solid #000000;
+			background: red;
+			margin: 10px;
+		}
+
+	</style>
+
+	<script type="text/javascript">
+		
+		var x,y,n=0,ny=0,rotINT,rotYINT
+
+		function rotateDIV()
+		{
+			x=document.getElementById("rotate2D")
+			clearInterval(rotINT)
+			rotINT=setInterval("startRotate()",10)
+		}
+
+		function rotateYDIV()
+		{
+			y=document.getElementById("rotate3D")
+			clearInterval(rotYINT)
+			rotYINT=setInterval("startYRotate()",10)
+		}
+
+		function startRotate()
+		{
+			n=n+1
+			x.style.transform="rotate(" + n + "deg)"
+			x.style.webKitTransform="rotate(" + n + "deg)"
+			s.style.OTransform="rotate(" + n + "deg)"
+			x.style.MozTranform="rotate(" + n + "deg)"
+			if(n==180 || n==360)
+		{
+			clearInterval(rotINT)
+					if (n==360){n=0}
+			}
+		}
+
+		function startYRotate()
+		{
+			ny=ny+1
+			y.style.transform="rotateY(" + ny + "deg)"
+			y.style.webKitTransform="rotateY(" + ny + "deg)"
+			y.style.OTransform="rotateY(" + ny + "deg)"
+			y.style.MozTranform="rotateY(" + ny + "deg)"
+			if(ny==180 || ny==360)
+		{
+				clearInterval(rotYINT)
+					if (ny>=360){ny=0}
+			}
+		}
+
+	</script>
+
+</head>
+<body>
+
+	<div style="height: 80px;">
+		<div onmouseover="rotateDIV()" id="rotate2D" style="transform: rotate(180deg);">2D rotate</div>
+		<div onmouseover="rotateYDIV()" id="rotate3D" style="animation: rotateY(360deg)">3D rotate</div>
+		
+	</div>
+
+</body>
+</html>
+-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<style type="text/css">
+		
+		div {
+			width: 300px;
+			height: 100px;
+			background-color: yellow~;
+			border: 1px solid black;
+		}
+
+		div#myDiv {
+			-ms-transform: rotate(20deg); /* IE 9 */
+			-webkit-transform:rotate(20deg); /* Safari */
+			transform: rotate(5deg); /* Standard syntax */
+		}
+
+		#div1 {
+			transform: scale(1.4, 2);
+			transform: skewY(20deg);
+		}
+
+	</style>
+
+</head>
+<body>
+
+	<div>
+	This a normal div element
+	</div>
+
+	<div id="myDiv">
+	The rotate() method rotates an element clockwise or couter-clockwise. This divelement is rotate clockwise 20degrees.
+	</div>
+
+	<div id="div1">
+		<h1>Scale</h1>
+	</div>
+
+</body>
+</html>
